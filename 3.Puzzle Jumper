@@ -1,0 +1,21 @@
+public class plataforma : MonoBehaviour {
+    public Rigidbody rb;
+	// Use this for initialization
+	void Start () {
+        this.rb.useGravity = false;
+	}
+	
+	// Update is called once per frame
+	void Update()
+    {
+
+    }
+
+        void OnTriggerEnter (Collider other)      \\ao toque do player
+        {
+		if (other.gameObject.CompareTag ("Player"))
+        {
+            this.GetComponent<Rigidbody>().useGravity = true;   \\ a gravidade da plataforma ativa e cai
+        }
+	}
+}
