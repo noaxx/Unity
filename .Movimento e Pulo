@@ -43,7 +43,7 @@
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.gameObject.CompareTag("Ground")) \\Se o Player não estiver no chão, não pode pular novamente
+		if (other.gameObject.CompareTag("Ground")) //Se o Player não estiver no chão, não pode pular novamente
 		{
 
 			podePular = true;
